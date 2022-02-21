@@ -1,0 +1,75 @@
+﻿@model EntityLayer.Concrete.Product
+
+@{
+
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<div class="container-fluid ">
+    <style>
+        label {
+            text-transform: uppercase
+        }
+
+        select {
+            text-transform: capitalize
+        }
+
+        h3 {
+            color: red
+        }
+       
+    </style>
+
+
+    <form class="form-group " method="post">
+
+        <input type="hidden" asp-for="ProductID" />
+        <label>Product Name</label>
+        <br />
+        <input type="text" class="form-control col-4" asp-for="ProductName" />
+        <h3> <span asp-validation-for="ProductName"></span></h3>
+        <br />
+
+        <label>Brand</label>
+        <br />
+        <select style="font-size:20px" asp-for="BrandID" asp-items="@ViewBag.blst" class="form-control col-4">
+        
+        </select>
+       
+        <br />
+
+
+        <label>Description</label>
+        <br />
+        <textarea  class="form-control col-4" asp-for="Description"></textarea>
+        <h3> <span asp-validation-for="Description"></span></h3>
+        <br />
+
+
+        <label>Lumen</label>
+        <br />
+        <input type="number" value="0" class="form-control col-4" asp-for="Lumens" />
+        <h3> <span asp-validation-for="Lumens"></span></h3>
+        <br />
+
+
+        <label>Watt</label>
+        <br />
+        <input type="number" value="0" class="form-control col-4" asp-for="Watt" />
+        <h3> <span asp-validation-for="Watt"></span></h3>
+        <br />
+
+
+        <label>Stock</label>
+        <br />
+        <input type="number" value="0" class="form-control col-4" asp-for="Stock" />
+        <h3> <span asp-validation-for="Stock"></span></h3>
+        <br />
+        <button class="  btn  btn-success">ADD</button>
+        <a style="margin-left:1%" href="/Product/Index" class="btn btn-info">BACK</a>
+    </form>
+</div>

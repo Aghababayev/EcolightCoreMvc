@@ -1,0 +1,62 @@
+﻿@model List<Distributor>
+@{
+    Layout = null;
+}
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+<br />
+
+<div class="container-fluid">
+    <table id="tbl1" class="table table-bordered" style="margin-top:20px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Adress</th>
+                <th>Phone </th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        @foreach (var ds in Model)
+        {
+            <tr>
+                <td>@ds.DistribitorID</td>
+
+                <td>@ds.Dname</td>
+                <td>@ds.Dmail</td>
+                <td>@ds.Dadress</td>
+                <td>@ds.Dphone</td>
+               
+                <td><a href="/Distributor/Delete/@ds.DistribitorID" class="btn btn-danger" style="width:100%">Delete</a></td>
+                <td><a href="/Distributor/GetProduct/@ds.DistribitorID" class="btn btn-success" style="width:100%">Update</a></td>
+                @*<td><a href"" class="btn btn-info" style="width:100%">Detalis</a></td>*@
+
+            </tr>
+
+        }
+    </table>
+</div>
+<br />
+
+<a href="/Distributor/Add" class="btn btn-info">Add</a>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
+
+<link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
+
+
+<script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+
+<script>
+    $('#tbl1').dataTable();
+</script>
