@@ -1,66 +1,57 @@
-﻿
-@model List<Product>
-@{
-    Layout = null;
-}
+﻿@model List<Product>
+
+
+
+
 <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 <br />
 
-    <div class="container-fluid">
-        <table id="tbl1" class="table table-bordered" style="margin-top:20px">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>BrandID</th>
-                    <th>Descrtiption</th>
-                    <th>Lumens </th>
-                    <th>Watt</th>
-                    <th>Stock</th>
-                    <th>Delete</th>
-                    <th>Update</th>
-                    <th>Detalis</th>
-                </tr>
-            </thead>
-            @foreach (var pr in Model)
-            {
-        <tr>
-            <td>@pr.ProductID</td>
-            
-            <td>@pr.ProductName</td>
-            <td>@pr.Brand.BrandName</td>
-            <td>@pr.Description</td>
-            <td>@pr.Lumens</td>
-            <td>@pr.Watt</td>
-            <td>@pr.Stock</td> 
-            <td><a href="/Product/Delete/@pr.ProductID" class="btn btn-danger" style="width:100%">Delete</a></td>
-            <td><a href="/Product/GetProduct/@pr.ProductID" class="btn btn-success" style="width:100%">Update</a></td>
-            <td><a href"" class="btn btn-info" style="width:100%">Detalis</a></td>
+<div class="container-fluid">
+    <table id="tbl1" class="table table-bordered" style="margin-top:20px">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>BrandID</th>
+                <th>Descrtiption</th>
+                <th>Lumens </th>
+                <th>Watt</th>
+                <th>Stock</th>
+                <th>Delete</th>
+                <th>Update</th>
+                <th>Detalis</th>
+            </tr>
+        </thead>
+        @foreach (var pr in Model)
+        {
+            <tr>
+                <td>@pr.ProductID</td>
 
-        </tr>
+                <td>@pr.ProductName</td>
+                <td>@pr.Brand.BrandName</td>
+                <td>@pr.Description</td>
+                <td>@pr.Lumens</td>
+                <td>@pr.Watt</td>
+                <td>@pr.Stock</td>
+                <td><a href="/Product/Delete/@pr.ProductID" class="btn btn-danger" style="width:100%">Delete</a></td>
+                <td><a href="/Product/GetProduct/@pr.ProductID" class="btn btn-success" style="width:100%">Update</a></td>
+                <td><a href"" class="btn btn-info" style="width:100%">Detalis</a></td>
 
-            }
-        </table>
-    </div>
+            </tr>
+
+        }
+    </table>
+</div>
 
 <a href="/Product/Add" class="btn btn-info">Add</a>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
-
-
-
 <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-
-
 <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
-
-
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
 
 <script>
     $('#tbl1').dataTable();
 </script>
+

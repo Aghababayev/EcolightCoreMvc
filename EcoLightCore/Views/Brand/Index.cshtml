@@ -1,8 +1,6 @@
 ﻿
 @model List<Brand>
-@{
-    Layout = null;
-}
+
 <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 <br />
 
@@ -12,21 +10,22 @@
             <tr>
                 <th>ID</th>
                 <th>Name</th>
-                
+                <th>Delete</th>
+                <th>Update</th>
+             
             </tr>
         </thead>
         @foreach (var brnd in Model)
         {
             <tr>
-                
 
-                <td>@brnd.BrandID</td> 
+
+                <td>@brnd.BrandID</td>
                 <td>@brnd.BrandName</td>
-              
-                <td><a href="/Product/Delete/" class="btn btn-danger" style="width:100%">Delete</a></td>
-                <td><a href="/Product/GetProduct/" class="btn btn-success" style="width:100%">Update</a></td>
-                <td><a href"" class="btn btn-info" style="width:100%">Detalis</a></td>
 
+                <td><a href="/Brand/Delete/@brnd.BrandID" class="btn btn-danger" style="width:100%">Delete</a></td>
+                <td><a href="/Brand/Get/@brnd.BrandID" class="btn btn-success" style="width:100%">Update</a></td>
+              
             </tr>
 
         }
@@ -36,21 +35,10 @@
 <a href="/Brand/Add" class="btn btn-info">Add</a>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-
-
-
-
 <link href="https://cdn.datatables.net/responsive/2.1.1/css/responsive.bootstrap.min.css" rel="stylesheet" />
-
-
 <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap4.min.js "></script>
-
-
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css">
-
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-
 <script>
     $('#tbl1').dataTable();
 </script>

@@ -1,14 +1,15 @@
 ﻿@model EntityLayer.Concrete.Brand
 
-@{
 
-    Layout = null;
-}
 
 <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
 
 
 <div class="container-fluid ">
+
+
+
+
     <style>
         label {
             text-transform: uppercase
@@ -24,7 +25,9 @@
     </style>
 
 
-    <form class="form-group " method="post">
+
+
+    <form asp-controller="Brand" asp-action="Update" class="form-group " method="post">
 
         <input type="hidden" asp-for="BrandID" />
         <label>Brand Name</label>
@@ -32,8 +35,13 @@
         <input type="text" class="form-control col-4" asp-for="BrandName" />
         <h3> <span asp-validation-for="BrandName"></span></h3>
         <br />
-        <button class="  btn  btn-success">ADD</button>
-        <a style="margin-left:1%" href="/Brand/Index" class="btn btn-info">BACK</a>
-    </form>
-</div>
+       
+      
 
+
+        <button class="btn btn-success">Update</button>
+
+
+    </form>
+
+</div>

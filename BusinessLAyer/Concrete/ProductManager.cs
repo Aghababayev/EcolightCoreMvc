@@ -18,12 +18,12 @@ namespace BusinessLAyer.Concrete
         }
         public void BAdd(Product t)
         {
-            throw new NotImplementedException();
+            _productDAL.Insert(t);
         }
 
         public void BDElete(Product t)
         {
-            throw new NotImplementedException();
+            _productDAL.Delete(t);
         }
 
         public List<Product> BGetbrandname()
@@ -33,7 +33,7 @@ namespace BusinessLAyer.Concrete
 
         public Product BGetById(int id)
         {
-            throw new NotImplementedException();
+          return  _productDAL.GetById(id);
         }
 
         public List<Product> BListAll()
@@ -43,7 +43,7 @@ namespace BusinessLAyer.Concrete
 
         public void BUpdate(Product t)
         {
-            throw new NotImplementedException();
+            _productDAL.Update(t);
         }
 
       

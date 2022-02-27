@@ -8,6 +8,7 @@ using EntityLayer.Concrete;
 using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,13 +19,15 @@ namespace EcoLightCore.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-
+  
         public ProductController(IProductService productService)
         {
             _productService = productService;
         }
 
-       // --------------------------------------------------------------------------------------------------------------------------
+       
+
+        // --------------------------------------------------------------------------------------------------------------------------
 
         public IActionResult Index()
         {

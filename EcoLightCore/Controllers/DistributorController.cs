@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Abstract;
+using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,17 @@ namespace EcoLightCore.Controllers
         public IActionResult Index()
         {
             return View(_distributorDAL.GetListALL());
+        }
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Add(Distributor p)
+        {
+
+            return View();
         }
     }
 }

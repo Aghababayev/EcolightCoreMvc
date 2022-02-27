@@ -166,3 +166,6 @@ D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\Newtonsoft.Json.Bson.d
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Brand\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Brand\Add.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\_MainLayout.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Brand\Get.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Add.cshtml.g.cs
