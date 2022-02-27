@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 namespace BusinessLAyer.Abstract
 {
   public interface IProductService : IGenericService<Product>
-    { 
-    
+    {
+        List<Product> BGetbrandname();
     }
     
 }

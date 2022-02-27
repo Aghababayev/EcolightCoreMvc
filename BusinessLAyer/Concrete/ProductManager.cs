@@ -26,6 +26,11 @@ namespace BusinessLAyer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Product> BGetbrandname()
+        {
+            return _productDAL.Getbrandname(); 
+        }
+
         public Product BGetById(int id)
         {
             throw new NotImplementedException();
@@ -40,5 +45,7 @@ namespace BusinessLAyer.Concrete
         {
             throw new NotImplementedException();
         }
+
+      
     }
 }

@@ -9,8 +9,8 @@ namespace EcoLightCore.Controllers
 {
     public class DistributorController : Controller
     {
-
-        IDistributorDAL _distributorDAL;
+ 
+        private readonly IDistributorDAL _distributorDAL;
 
         public DistributorController(IDistributorDAL distributorDAL)
         {
