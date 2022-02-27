@@ -24,7 +24,7 @@ namespace EcoLightCore.Controllers
             _productService = productService;
         }
 
-        //--------------------------------------------------------------------------------------------------------------------------
+       // --------------------------------------------------------------------------------------------------------------------------
 
         public IActionResult Index()
         {
@@ -33,96 +33,102 @@ namespace EcoLightCore.Controllers
 
 
         //--------------------------------------------------------------------------------------------------------------------------
-        //[HttpGet]
-        //public IActionResult Add()
-        //{
-        //    using var c = new Context();
-        //    List<SelectListItem> val = (from i in c.Brands.ToList()
-        //                                select new SelectListItem
-        //                                {
-        //                                    Text = i.BrandName,
-        //                                    Value = i.BrandID.ToString()
-        //                                }).ToList();
+        [HttpGet]
+        public IActionResult Add()
+        {
+            using var c = new Context();
+            List<SelectListItem> val = (from i in c.Brands.ToList()
+                                        select new SelectListItem
+                                        {
+                                            Text = i.BrandName,
+                                            Value = i.BrandID.ToString()
+                                        }).ToList();
 
 
-        //    @ViewBag.blst = val; 
-        //    return View();
-        //}//--------------------------------------------------------------------------------------------------------------------------
-        //[HttpPost]
-        //public IActionResult Add(Product p)
-        //{
-        //    using var c = new Context();
-        //    List<SelectListItem> val = (from i in c.Brands.ToList()
-        //                                select new SelectListItem
-        //                                {
-        //                                    Text = i.BrandName,
-        //                                    Value = i.BrandID.ToString()
-        //                                }).ToList();
-        //    @ViewBag.blst = val; 
-        //    //_______________________________________________________________________________________________________________________
-        //    ProductValidator pv = new ProductValidator();
-        //    ValidationResult result = pv.Validate(p);
-        //    if (result.IsValid)
-        //    {
-        //        _productDAL.Insert(p);
-        //        return RedirectToAction("Index");
-        //    }
-        //    else {
-        //        foreach (var item in result.Errors)
-        //        {
-        //            ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-        //        }
-        //    }
-        //    return View();
-        //}//--------------------------------------------------------------------------------------------------------------------------
-        //public IActionResult Delete(int id)
-        //{
-        //    var val = _productDAL.GetById(id);
-        //    _productDAL.Delete(val);
-        //    return RedirectToAction("Index");
-        //}//--------------------------------------------------------------------------------------------------------------------------
-        //public IActionResult GetProduct(int id)
-        //{
-        //    using var c = new Context();
-        //    List<SelectListItem> val = (from i in c.Brands.ToList()
-        //                                select new SelectListItem
-        //                                {
-        //                                    Text = i.BrandName,
-        //                                    Value = i.BrandID.ToString()
-        //                                }).ToList();
-        //    @ViewBag.blst = val;
-        //    var prd = _productDAL.GetById(id);
-        //    return View(prd);
-        //}//--------------------------------------------------------------------------------------------------------------------------
-        //public IActionResult Update(Product p)
-        //{
-        //    using var c = new Context();
-        //    List<SelectListItem> val = (from i in c.Brands.ToList()
-        //                                select new SelectListItem
-        //                                {
-        //                                    Text = i.BrandName,
-        //                                    Value = i.BrandID.ToString()
-        //                                }).ToList();
-        //    @ViewBag.blst = val;
-        //    //____________________________________________________________________________________________________
-        //    ProductValidator pv = new ProductValidator();
-        //    ValidationResult result = pv.Validate(p);
-        //    if (result.IsValid)
-        //    {
-        //        _productDAL.Update(p);
-        //        return RedirectToAction("Index");
-        //    }
-        //    else
-        //    {
-        //        foreach (var item in result.Errors)
-        //        {
-        //            ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
-        //        }
+            @ViewBag.blst = val;
+            return View();
+        }
+        //--------------------------------------------------------------------------------------------------------------------------
+        [HttpPost]
+        public IActionResult Add(Product p)
+        {
+            using var c = new Context();
+            List<SelectListItem> val = (from i in c.Brands.ToList()
+                                        select new SelectListItem
+                                        {
+                                            Text = i.BrandName,
+                                            Value = i.BrandID.ToString()
+                                        }).ToList();
+            @ViewBag.blst = val;
+            //_______________________________________________________________________________________________________________________
+            ProductValidator pv = new();
+            ValidationResult result = pv.Validate(p);
+            if (result.IsValid)
+            {
+                _productService.BAdd(p);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
+            return View();
+        }
+        //--------------------------------------------------------------------------------------------------------------------------
+        public IActionResult Delete(int id)
+        {
+            var val = _productService.BGetById(id);
+            _productService.BDElete(val);
+            return RedirectToAction("Index");
+        }
+        //--------------------------------------------------------------------------------------------------------------------------
+        public IActionResult GetProduct(int id)
+        {
+            using var c = new Context();
+            List<SelectListItem> val = (from i in c.Brands.ToList()
+                                        select new SelectListItem
+                                        {
+                                            Text = i.BrandName,
+                                            Value = i.BrandID.ToString()
+                                        }).ToList();
+            @ViewBag.blst = val;
+            var prd = _productService.BGetById(id);
+            return View(prd);
+        }
+        //--------------------------------------------------------------------------------------------------------------------------
+        public IActionResult Update(Product p)
+        {
+            using var c = new Context();
+            List<SelectListItem> val = (from i in c.Brands.ToList()
+                                        select new SelectListItem
+                                        {
+                                            Text = i.BrandName,
+                                            Value = i.BrandID.ToString()
+                                        }).ToList();
+            @ViewBag.blst = val;
+            //____________________________________________________________________________________________________
+            ProductValidator pv = new ();
+            ValidationResult result = pv.Validate(p);
+            if (result.IsValid)
+            {
+                _productService.BUpdate(p);
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
 
-        //    }
-        //    return View("GetProduct");
+            }
+            return View("GetProduct");
 
-        //}//--------------------------------------------------------------------------------------------------------------------------
+        }
+        //--------------------------------------------------------------------------------------------------------------------------
 
     }
 }
