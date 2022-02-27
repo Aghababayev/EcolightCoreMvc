@@ -36,6 +36,7 @@ namespace EcoLightCore
             services.AddScoped<IDistributorDAL, EFDistributor>();
             services.AddScoped<IBrandDAL, EFBrand>();
             services.AddScoped<IBrandService, BrandManager>();
+            services.AddScoped<IProductService, ProductManager>();
 
 
             //________________________________________________________________________________
