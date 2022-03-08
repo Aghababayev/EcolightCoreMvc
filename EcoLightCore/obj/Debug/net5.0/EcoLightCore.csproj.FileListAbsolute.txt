@@ -5,7 +5,6 @@ D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.deps.json
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.runtimeconfig.json
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.runtimeconfig.dev.json
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.dll
-D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\ref\EcoLightCore.dll
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.pdb
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.Views.dll
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\EcoLightCore.Views.pdb
@@ -50,7 +49,6 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.MvcApplic
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.RazorAssemblyInfo.cache
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.RazorAssemblyInfo.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\staticwebassets\EcoLightCore.StaticWebAssets.Manifest.cache
-D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\staticwebassets\EcoLightCore.StaticWebAssets.xml
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\scopedcss\bundle\EcoLightCore.styles.css
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.TagHelpers.input.cache
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.TagHelpers.output.cache
@@ -169,3 +167,5 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Brand\Add.
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\_MainLayout.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Brand\Get.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Add.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\refint\EcoLightCore.dll
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Get.cshtml.g.cs

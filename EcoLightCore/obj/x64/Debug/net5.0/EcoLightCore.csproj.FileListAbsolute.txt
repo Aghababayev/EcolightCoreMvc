@@ -1,0 +1,13 @@
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.csproj.AssemblyReference.cache
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.AssemblyInfoInputs.cache
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.AssemblyInfo.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.csproj.CoreCompileInputs.cache
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.MvcApplicationPartsAssemblyInfo.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.MvcApplicationPartsAssemblyInfo.cache
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.RazorAssemblyInfo.cache
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.RazorAssemblyInfo.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.dll
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\refint\EcoLightCore.dll
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\EcoLightCore.pdb
+D:\C# projects\EcoLightCore\EcoLightCore\obj\x64\Debug\net5.0\ref\EcoLightCore.dll

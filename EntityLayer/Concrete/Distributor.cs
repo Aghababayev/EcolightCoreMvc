@@ -15,6 +15,7 @@ namespace EntityLayer.Concrete
        public ICollection<Order> Orders { get; set; }
         //
         public string Dname { get;  set; }
+    
         public string Dmail { get;  set; }
         public string Dadress { get;  set; }
         public string Dphone { get;  set; }

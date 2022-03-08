@@ -2,7 +2,6 @@ D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\BusinessLAyer.deps.js
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\BusinessLAyer.runtimeconfig.json
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\BusinessLAyer.runtimeconfig.dev.json
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\BusinessLAyer.dll
-D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\ref\BusinessLAyer.dll
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\BusinessLAyer.pdb
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\DataAccessLayer.dll
 D:\C# projects\EcoLightCore\BusinessLAyer\bin\Debug\net5.0\EntityLayer.dll
@@ -18,3 +17,4 @@ D:\C# projects\EcoLightCore\BusinessLAyer\obj\Debug\net5.0\BusinessLAyer.dll
 D:\C# projects\EcoLightCore\BusinessLAyer\obj\Debug\net5.0\ref\BusinessLAyer.dll
 D:\C# projects\EcoLightCore\BusinessLAyer\obj\Debug\net5.0\BusinessLAyer.pdb
 D:\C# projects\EcoLightCore\BusinessLAyer\obj\Debug\net5.0\BusinessLAyer.genruntimeconfig.cache
+D:\C# projects\EcoLightCore\BusinessLAyer\obj\Debug\net5.0\refint\BusinessLAyer.dll

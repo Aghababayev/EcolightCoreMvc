@@ -1,6 +1,8 @@
 ﻿using BusinessLAyer.Abstract;
+using BusinessLAyer.Validators;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -33,8 +35,22 @@ namespace EcoLightCore.Controllers
         [HttpPost]
         public IActionResult Add(Distributor p)
         {
-            _distributorService.BAdd(p);
-            return RedirectToAction("Index");
+            DistributorValidator dv = new();
+            ValidationResult result= dv.Validate(p);
+            if (result.IsValid)
+            {
+                _distributorService.BAdd(p);
+                return RedirectToAction("Index");
+
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName,item.ErrorMessage );
+                }
+            }
+           return View();
         }
         //______________________________________________________________________________________________________________
         public IActionResult Delete(int id)
@@ -53,10 +69,24 @@ namespace EcoLightCore.Controllers
         //______________________________________________________________________________________________________________
         public IActionResult Update(Distributor p)
         {
-            _distributorService.BUpdate(p);
-            return View("Index");
+            DistributorValidator dv = new();
+            ValidationResult result = dv.Validate(p);
+            if (result.IsValid)
+            {
+                _distributorService.BUpdate(p);
+                return View("Index");
+            
+            }
+            else
+            {
+                foreach (var item in result.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
 
-        
+            return View("Get");
         }
+       
     }
 }

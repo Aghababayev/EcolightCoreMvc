@@ -2,7 +2,6 @@ D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\EntityLayer.deps.json
 D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.json
 D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\EntityLayer.runtimeconfig.dev.json
 D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\EntityLayer.dll
-D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\ref\EntityLayer.dll
 D:\C# projects\EcoLightCore\EntityLayer\bin\Debug\net5.0\EntityLayer.pdb
 D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\EntityLayer.csproj.AssemblyReference.cache
 D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\EntityLayer.GeneratedMSBuildEditorConfig.editorconfig
@@ -13,3 +12,4 @@ D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\EntityLayer.dll
 D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\ref\EntityLayer.dll
 D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\EntityLayer.pdb
 D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\EntityLayer.genruntimeconfig.cache
+D:\C# projects\EcoLightCore\EntityLayer\obj\Debug\net5.0\refint\EntityLayer.dll

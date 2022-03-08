@@ -1,0 +1,62 @@
+﻿@model EntityLayer.Concrete.Distributor
+
+
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<div class="container-fluid ">
+
+
+
+
+    <style>
+        label {
+            text-transform: uppercase
+        }
+
+        select {
+            text-transform: capitalize
+        }
+
+        h3 {
+            color: red
+        }
+    </style>
+
+
+
+
+    <form asp-controller="Distributor" asp-action="Update" class="form-group " method="post">
+
+        <input type="hidden" asp-for="DistribitorID" />
+        <label>Distributor Name</label>
+        <br />
+        <input type="text" class="form-control col-4" asp-for="Dname" />
+        <h3> <span asp-validation-for="Dname"></span></h3>
+        <br />
+        <label>Distributor Mail</label>
+        <br />
+        <input type="text" class="form-control col-4" asp-for="Dmail" />
+        <h3> <span asp-validation-for="Dmail"></span></h3>
+        <br />
+        <label>Distributor Address</label>
+        <br />
+        <input type="text" class="form-control col-4" asp-for="Dadress" />
+        <h3> <span asp-validation-for="Dadress"></span></h3>
+        <br />
+        <label>Distributor Phone</label>
+        <br />
+        <input type="text" class="form-control col-4" asp-for="Dphone" />
+        <h3> <span asp-validation-for="Dphone"></span></h3>
+        <br />
+
+
+
+
+        <button class="btn btn-success">Update</button>
+
+
+    </form>
+
+</div>
