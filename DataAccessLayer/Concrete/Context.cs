@@ -14,7 +14,7 @@ namespace DataAccessLayer.Concrete
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
                optionsBuilder.UseSqlServer("server=NB062\\MSSQLSERVER01;database=EcoLightCoreDB;integrated security=true;");
-
+           
           
         }
         public DbSet<Product> Products { get; set; }

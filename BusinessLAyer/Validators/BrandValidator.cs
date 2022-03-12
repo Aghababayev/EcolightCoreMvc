@@ -1,21 +1,17 @@
 ﻿using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using FluentValidation;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace BusinessLAyer.Validators
 {
-   public class BrandValidator : AbstractValidator<Brand>
+    public class BrandValidator : AbstractValidator<Brand>
     {
         public BrandValidator()
         {
             RuleFor(x => x.BrandName).NotNull().WithMessage("Please insert brand name");
             RuleFor(x => x.BrandName).MinimumLength(3).WithMessage("Minimum 2 characters").MaximumLength(10).WithMessage("Maximum 10 characters").Must(UniqueName).WithMessage("Name already exist");
-          
+
         }
         private bool UniqueName(string p)
         {
@@ -27,11 +23,11 @@ namespace BusinessLAyer.Validators
 
                 if (brand == null) return true;
             }
-         
-         
-          
+
+
+
             return false;
-        
+
         }
     }
 }
