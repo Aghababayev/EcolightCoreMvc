@@ -10,5 +10,7 @@ namespace BusinessLAyer.Abstract
     public interface IOrderService:IGenericService<Order>
     {
         List<Order> BGetProductDistributer();
+  
     }
+
 }

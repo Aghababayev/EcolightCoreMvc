@@ -19,36 +19,23 @@ namespace EcoLightCore.Controllers
     public class ProductController : Controller
     {
         private readonly IProductService _productService;
-  
+
         public ProductController(IProductService productService)
         {
             _productService = productService;
         }
-
-       
-
         // --------------------------------------------------------------------------------------------------------------------------
-
         public IActionResult Index()
         {
             return View(_productService.BGetbrandname());
         }
-
-
         //--------------------------------------------------------------------------------------------------------------------------
         [HttpGet]
         public IActionResult Add()
         {
             using var c = new Context();
-            List<SelectListItem> val = (from i in c.Brands.ToList()
-                                        select new SelectListItem
-                                        {
-                                            Text = i.BrandName,
-                                            Value = i.BrandID.ToString()
-                                        }).ToList();
+            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
 
-
-            @ViewBag.blst = val;
             return View();
         }
         //--------------------------------------------------------------------------------------------------------------------------
@@ -56,13 +43,7 @@ namespace EcoLightCore.Controllers
         public IActionResult Add(Product p)
         {
             using var c = new Context();
-            List<SelectListItem> val = (from i in c.Brands.ToList()
-                                        select new SelectListItem
-                                        {
-                                            Text = i.BrandName,
-                                            Value = i.BrandID.ToString()
-                                        }).ToList();
-            @ViewBag.blst = val;
+            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList(); ;
             //_______________________________________________________________________________________________________________________
             ProductValidator pv = new();
             ValidationResult result = pv.Validate(p);
@@ -91,13 +72,7 @@ namespace EcoLightCore.Controllers
         public IActionResult GetProduct(int id)
         {
             using var c = new Context();
-            List<SelectListItem> val = (from i in c.Brands.ToList()
-                                        select new SelectListItem
-                                        {
-                                            Text = i.BrandName,
-                                            Value = i.BrandID.ToString()
-                                        }).ToList();
-            @ViewBag.blst = val;
+            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
             var prd = _productService.BGetById(id);
             return View(prd);
         }
@@ -105,15 +80,11 @@ namespace EcoLightCore.Controllers
         public IActionResult Update(Product p)
         {
             using var c = new Context();
-            List<SelectListItem> val = (from i in c.Brands.ToList()
-                                        select new SelectListItem
-                                        {
-                                            Text = i.BrandName,
-                                            Value = i.BrandID.ToString()
-                                        }).ToList();
-            @ViewBag.blst = val;
+
+            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+
             //____________________________________________________________________________________________________
-            ProductValidator pv = new ();
+            ProductValidator pv = new();
             ValidationResult result = pv.Validate(p);
             if (result.IsValid)
             {
@@ -126,10 +97,8 @@ namespace EcoLightCore.Controllers
                 {
                     ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
                 }
-
             }
             return View("GetProduct");
-
         }
         //--------------------------------------------------------------------------------------------------------------------------
 

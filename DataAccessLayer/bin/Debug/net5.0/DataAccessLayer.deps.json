@@ -13,7 +13,8 @@
           "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.EntityFrameworkCore.Design": "5.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
-          "Microsoft.EntityFrameworkCore.Tools": "5.0.13"
+          "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
+          "System.Collections": "4.3.0"
         },
         "runtime": {
           "DataAccessLayer.dll": {}

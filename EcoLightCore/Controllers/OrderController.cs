@@ -16,5 +16,10 @@ namespace EcoLightCore.Controllers
         {
             return View(_orderService.BGetProductDistributer());
         }
+        public IActionResult Add()
+        { 
+           
+          return View();    
+        }
     }
 }

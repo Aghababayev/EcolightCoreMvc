@@ -2,6 +2,7 @@
 using DataAccessLayer.Concrete;
 using DataAccessLayer.Repository;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -13,6 +14,8 @@ namespace DataAccessLayer.EntityFrmaework
 {
     public class EFOrder : GenericRepository<Order>, IOrderDAL
     {
+       
+
         public List<Order> GetProductDistributer()
         {
           using var c=new Context();

@@ -10,6 +10,7 @@ namespace DataAccessLayer.Abstract
     public interface IOrderDAL : IGenericDAL<Order>
     {
         List<Order> GetProductDistributer();
+       
       
     }
 }

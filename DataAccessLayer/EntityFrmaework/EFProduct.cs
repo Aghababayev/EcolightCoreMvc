@@ -14,14 +14,14 @@ namespace DataAccessLayer.EntityFrmaework
 {
     public class EFProduct : GenericRepository<Product>, IProductDAL
     {
-       
+      
 
         public List<Product> Getbrandname()
         {
             using var c = new Context();
             return c.Products.Include(x => x.Brand).ToList();
         }
-
+       
        
     }
 }

@@ -3216,7 +3216,8 @@
           "EntityLayer": "1.0.0",
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.EntityFrameworkCore": "5.0.13",
-          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13"
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
+          "System.Collections": "4.3.0"
         },
         "compile": {
           "bin/placeholder/DataAccessLayer.dll": {}

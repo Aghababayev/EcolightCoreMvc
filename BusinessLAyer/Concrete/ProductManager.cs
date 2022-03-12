@@ -46,6 +46,6 @@ namespace BusinessLAyer.Concrete
             _productDAL.Update(t);
         }
 
-      
+       
     }
 }
