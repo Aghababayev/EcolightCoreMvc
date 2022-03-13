@@ -14,7 +14,18 @@ namespace DataAccessLayer.EntityFrmaework
 {
     public class EFOrder : GenericRepository<Order>, IOrderDAL
     {
+        public object DropdownDistributor()
+        {
+            using var c = new Context();
+           return c.Distributors.Select(x => new SelectListItem { Value = x.DistribitorID.ToString(), Text = x.Dname }).ToList();
        
+        }
+
+        public object DropdownProduct()
+        {
+            using var c = new Context();
+          return c.Products.Select(x => new SelectListItem { Value = x.ProductID.ToString(), Text = x.ProductName + " " + x.Brand.BrandName + " WATT:" + x.Watt }).ToList();
+        }
 
         public List<Order> GetProductDistributer()
         {

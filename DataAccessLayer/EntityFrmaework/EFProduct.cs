@@ -14,7 +14,11 @@ namespace DataAccessLayer.EntityFrmaework
 {
     public class EFProduct : GenericRepository<Product>, IProductDAL
     {
-      
+        public object DropdownProduct()
+        {
+            using var c = new Context();
+           return c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+        }
 
         public List<Product> Getbrandname()
         {

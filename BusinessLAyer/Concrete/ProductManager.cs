@@ -26,6 +26,11 @@ namespace BusinessLAyer.Concrete
             _productDAL.Delete(t);
         }
 
+        public object BDropdownproduct()
+        {
+            return _productDAL.DropdownProduct();
+        }
+
         public List<Product> BGetbrandname()
         {
             return _productDAL.Getbrandname(); 

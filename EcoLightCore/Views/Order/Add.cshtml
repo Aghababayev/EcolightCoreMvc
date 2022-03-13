@@ -1,0 +1,55 @@
+﻿
+@model EntityLayer.Concrete.Order
+
+@{
+
+    Layout = null;
+}
+
+<link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+
+
+<div class="container-fluid ">
+    <style>
+        label {
+            text-transform: uppercase
+        }
+
+        select {
+            text-transform: capitalize
+        }
+
+        h3 {
+            color: red
+        }
+       
+    </style>
+
+
+    <form class="form-group " method="post">
+
+        <input type="hidden" asp-for="OrderID" />
+      
+  
+        <label>Distributor</label>
+        <br />
+        <select style="font-size:20px" asp-for="DistributorID" asp-items="@ViewBag.dist" class="form-control col-4">
+        
+        </select>
+  <label>Product</label>
+        <br />
+        <select style="font-size:20px" asp-for="ProductID" asp-items="@ViewBag.prd" class="form-control col-4">
+        
+        </select>
+       
+        <br />
+
+        <label>Quantity</label>
+        <br />
+        <input type="number" value="0" class="form-control col-4" asp-for="Quantity" />
+        <h3> <span asp-validation-for="Quantity"></span></h3>
+        <br />
+        <button class="  btn  btn-success">ADD</button>
+        <a style="margin-left:1%" href="/Product/Index" class="btn btn-info">BACK</a>
+    </form>
+</div>

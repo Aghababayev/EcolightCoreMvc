@@ -25,8 +25,8 @@
                 <td>@ord.Distributor.Dname</td>
                 <td>@ord.Product.ProductName (@ord.Product.Brand.BrandName) </td>
                 <td>@ord.Quantity</td>
-                <td><a href="/Order/Delete/" class="btn btn-danger" style="width:100%">Delete</a></td>
-                <td><a href="/Order/Get/" class="btn btn-success" style="width:100%">Update</a></td>
+                <td><a href="/Order/Delete/@ord.OrderID" class="btn btn-danger" style="width:100%">Delete</a></td>
+                <td><a href="/Order/Get/@ord.OrderID" class="btn btn-success" style="width:100%">Update</a></td>
               
             </tr>
 

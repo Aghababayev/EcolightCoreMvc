@@ -170,3 +170,4 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributo
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\refint\EcoLightCore.dll
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Get.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Add.cshtml.g.cs

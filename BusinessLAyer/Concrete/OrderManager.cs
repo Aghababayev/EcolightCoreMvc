@@ -48,6 +48,14 @@ namespace BusinessLAyer.Concrete
             return _orderDAL.GetProductDistributer();
         }
 
-        
+        public object BDropdownDistributor()
+        {
+           return _orderDAL.DropdownDistributor();
+        }
+
+        public object BDropdownProduct()
+        {
+            return _orderDAL.DropdownProduct();
+        }
     }
 }

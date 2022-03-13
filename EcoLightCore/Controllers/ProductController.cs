@@ -24,6 +24,8 @@ namespace EcoLightCore.Controllers
         {
             _productService = productService;
         }
+        ProductValidator pv = new();
+      
         // --------------------------------------------------------------------------------------------------------------------------
         public IActionResult Index()
         {
@@ -33,8 +35,8 @@ namespace EcoLightCore.Controllers
         [HttpGet]
         public IActionResult Add()
         {
-            using var c = new Context();
-            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+
+            @ViewBag.blst = _productService.BDropdownproduct();
 
             return View();
         }
@@ -42,10 +44,8 @@ namespace EcoLightCore.Controllers
         [HttpPost]
         public IActionResult Add(Product p)
         {
-            using var c = new Context();
-            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList(); ;
+            @ViewBag.blst = _productService.BDropdownproduct();
             //_______________________________________________________________________________________________________________________
-            ProductValidator pv = new();
             ValidationResult result = pv.Validate(p);
             if (result.IsValid)
             {
@@ -71,20 +71,17 @@ namespace EcoLightCore.Controllers
         //--------------------------------------------------------------------------------------------------------------------------
         public IActionResult GetProduct(int id)
         {
-            using var c = new Context();
-            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+            @ViewBag.blst = _productService.BDropdownproduct();
             var prd = _productService.BGetById(id);
             return View(prd);
         }
         //--------------------------------------------------------------------------------------------------------------------------
         public IActionResult Update(Product p)
         {
-            using var c = new Context();
-
-            @ViewBag.blst = c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+            @ViewBag.blst = _productService.BDropdownproduct();
 
             //____________________________________________________________________________________________________
-            ProductValidator pv = new();
+       
             ValidationResult result = pv.Validate(p);
             if (result.IsValid)
             {
