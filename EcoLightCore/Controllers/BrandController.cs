@@ -20,6 +20,9 @@ namespace EcoLightCore.Controllers
         {
             _brandService = brandService;
         }
+        //...........Fluent Validation Business Layer Validators
+        BrandValidator bv = new();
+        //............................
         //_______________________________________________________________________________________________
         public IActionResult Index()
         {
@@ -36,7 +39,7 @@ namespace EcoLightCore.Controllers
         [HttpPost]
         public IActionResult Add(Brand p)
         {
-            BrandValidator bv = new();
+          
             ValidationResult result = bv.Validate(p);
             if (result.IsValid)
             {
@@ -60,7 +63,7 @@ namespace EcoLightCore.Controllers
         //_______________________________________________________________________________________________
         public IActionResult Update(Brand p)
         {
-            BrandValidator bv = new();
+           
             ValidationResult result = bv.Validate(p);
             if (result.IsValid)
             {

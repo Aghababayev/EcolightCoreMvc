@@ -53,7 +53,6 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\scopedcss\bundle\EcoLi
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.TagHelpers.input.cache
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.TagHelpers.output.cache
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\EcoLightCore.RazorCoreGenerate.cache
-D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -148,7 +147,6 @@ D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\zh-Hans\Microsoft.Code
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\runtimes\win-arm\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\runtimes\win-arm64\lib\net5.0\dotnet-aspnet-codegenerator-design.exe
-D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\test.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Product\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\bin\Debug\net5.0\libman.json
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Product\Add.cshtml.g.cs
@@ -171,3 +169,5 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\refint\EcoLightCore.dl
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Distributor\Get.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Add.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\_Layout_Eco_light.cshtml.g.cs

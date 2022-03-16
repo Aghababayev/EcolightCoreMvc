@@ -22,6 +22,7 @@ namespace EntityLayer.Concrete
         public Product Product { get; set; }
         //
         public int Quantity { get; set; }
+        public DateTime? OrderTime { get; set; }
     }
 
 }

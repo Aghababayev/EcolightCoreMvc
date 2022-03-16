@@ -20,7 +20,9 @@ namespace EcoLightCore.Controllers
         {
             _distributorService = distributorService;
         }
-
+        //.........Fluent Validation Business Layer Validators
+        DistributorValidator dv = new();
+        //.................................
         public IActionResult Index()
         {
             return View(_distributorService.BListAll());
@@ -35,7 +37,7 @@ namespace EcoLightCore.Controllers
         [HttpPost]
         public IActionResult Add(Distributor p)
         {
-            DistributorValidator dv = new();
+        
             ValidationResult result= dv.Validate(p);
             if (result.IsValid)
             {
@@ -69,7 +71,7 @@ namespace EcoLightCore.Controllers
         //______________________________________________________________________________________________________________
         public IActionResult Update(Distributor p)
         {
-            DistributorValidator dv = new();
+      
             ValidationResult result = dv.Validate(p);
             if (result.IsValid)
             {
