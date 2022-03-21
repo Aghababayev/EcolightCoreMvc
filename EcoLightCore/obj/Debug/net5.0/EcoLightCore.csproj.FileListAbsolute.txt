@@ -171,3 +171,7 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Inde
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Order\Add.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\_Layout_Eco_light.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\About.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Distributor.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs

@@ -17,7 +17,7 @@ namespace DataAccessLayer.EntityFrmaework
         public object DropdownProduct()
         {
             using var c = new Context();
-           return c.Products.Select(p => new SelectListItem { Value = p.ProductID.ToString(), Text = p.ProductName }).ToList();
+           return c.Brands.Select(p => new SelectListItem { Value = p.BrandID.ToString(), Text = p.BrandName }).ToList();
         }
 
         public List<Product> Getbrandname()

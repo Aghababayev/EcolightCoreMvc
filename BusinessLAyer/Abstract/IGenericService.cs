@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLAyer.Abstract
 {
-    public interface IGenericService<T>
+    public interface IGenericService<T> where T : class
     {
         List<T> BListAll();
         T BGetById(int id);

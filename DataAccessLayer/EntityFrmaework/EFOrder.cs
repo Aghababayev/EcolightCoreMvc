@@ -24,7 +24,7 @@ namespace DataAccessLayer.EntityFrmaework
         public object DropdownProduct()
         {
             using var c = new Context();
-          return c.Products.Select(x => new SelectListItem { Value = x.ProductID.ToString(), Text = x.ProductName + " " + x.Brand.BrandName + " WATT:" + x.Watt }).ToList();
+          return c.Products.Select(x => new SelectListItem { Value = x.ProductID.ToString(), Text = x.ProductName + " " + x.Brand.BrandName + " WATTS:" + x.Watt }).ToList();
         }
 
         public List<Order> GetProductDistributer()
