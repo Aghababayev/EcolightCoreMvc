@@ -21,6 +21,7 @@ namespace DataAccessLayer.Concrete
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Distributor> Distributors { get; set; }
         public DbSet<Order> Orders{ get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 

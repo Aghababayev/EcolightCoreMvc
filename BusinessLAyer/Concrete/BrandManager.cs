@@ -35,7 +35,7 @@ namespace BusinessLAyer.Concrete
             return _brandDAL.GetById(id);
         }
 
-        public List<Brand> BListAll()
+        public  List<Brand> BListAll()
         {
             return _brandDAL.GetListALL();
         }

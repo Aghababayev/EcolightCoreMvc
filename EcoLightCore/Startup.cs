@@ -3,8 +3,11 @@ using BusinessLAyer.Concrete;
 using DataAccessLayer.Abstract;
 using DataAccessLayer.EntityFrmaework;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,14 +32,31 @@ namespace EcoLightCore
         {
             //Fluent validation used in BusinessLayer_______________________________________________________
             services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
+            //Authorization_____________________________________________________________
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+                   .AddCookie(x =>
+                   {
+                       x.LoginPath = "/Login/Index";
+                   });
+
+            services.AddMvc(config =>
+            {
+                var policy = new AuthorizationPolicyBuilder()
+                  .RequireAuthenticatedUser()
+                  .Build();
+                config.Filters.Add(new AuthorizeFilter(policy));
+
+            }
+            );
+            //__________________________________________________________________________-
 
             //Dependency Injection__________________________________________________________
             //---------------------------------------------------------------DATA ACCESS>>>>>BUSINESS
             services.AddScoped<IBrandDAL, EFBrand>();
             services.AddScoped<IProductDAL, EFProduct>();
             services.AddScoped<IDistributorDAL, EFDistributor>();
-            services.AddScoped< IOrderDAL, EFOrder > ();
-         //-------------------------------------------------------------------BUSINESS>>>>>>PRESENTATION
+            services.AddScoped<IOrderDAL, EFOrder>();
+            //-------------------------------------------------------------------BUSINESS>>>>>>PRESENTATION
             services.AddScoped<IBrandService, BrandManager>();
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<IDistributorService, DistributorManager>();
@@ -61,7 +81,8 @@ namespace EcoLightCore
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-          
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -73,7 +94,7 @@ namespace EcoLightCore
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Product}/{action=Index}/{id?}");
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
 
             });
         }

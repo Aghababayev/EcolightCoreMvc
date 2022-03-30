@@ -175,3 +175,4 @@ D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\About
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Distributor.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Home\Contact.cshtml.g.cs
 D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Shared\Components\Footer\Default.cshtml.g.cs
+D:\C# projects\EcoLightCore\EcoLightCore\obj\Debug\net5.0\Razor\Views\Login\Index.cshtml.g.cs
