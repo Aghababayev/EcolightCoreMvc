@@ -33,6 +33,7 @@ namespace EcoLightCore
             //Fluent validation used in BusinessLayer_______________________________________________________
             services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Startup>());
             //Authorization_____________________________________________________________
+            services.AddMvc();  
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                    .AddCookie(x =>
                    {
@@ -85,7 +86,7 @@ namespace EcoLightCore
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseAuthentication();    
             app.UseRouting();
 
             app.UseAuthorization();
