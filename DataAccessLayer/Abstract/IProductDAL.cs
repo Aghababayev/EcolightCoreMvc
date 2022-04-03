@@ -12,7 +12,7 @@ namespace DataAccessLayer.Abstract
     {
         List<Product> Getbrandname();
 
-    Object DropdownProduct();
+        List<SelectListItem> DropdownProduct();
 
      }
 }

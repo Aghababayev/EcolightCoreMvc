@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace BusinessLAyer.Abstract
   public interface IProductService : IGenericService<Product>
     {
         List<Product> BGetbrandname();
-        Object BDropdownproduct();
+      List<SelectListItem> BDropdownproduct();
      
     }
     

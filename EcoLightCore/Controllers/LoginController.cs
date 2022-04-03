@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
@@ -20,24 +21,31 @@ namespace EcoLightCore.Controllers
         {
             return View();
         }
-        
+
         [HttpPost]
         public async Task<IActionResult> Index(User p)
         {
-            using var c = new Context();
-            var value = c.Users.FirstOrDefault(x => x.UserName == p.UserName && x.Password == p.Password);
-            if (value != null)
+
+            using (var c = new Context())
             {
-                var claims = new List<Claim>
-              {
+                //var value = c.Users.Where(x => x.UserName == p.UserName && x.Password == p.Password).ToList();
+                var value = c.Users.
+                    FirstOrDefault(x => x.UserName == p.UserName && x.Password == p.Password);
+
+                if (value != null)
+                {
+                    var claims = new List<Claim>
+                    {
                   new Claim(ClaimTypes.Name, p.UserName)
-              };
-                var useridentity = new ClaimsIdentity(claims, "Login");
-                ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);  
-                await HttpContext.SignInAsync(principal);
-                RedirectToAction("Index", "Product");  
-            
+                    };
+                    var useridentity = new ClaimsIdentity(claims, "Login");
+                    ClaimsPrincipal principal = new ClaimsPrincipal(useridentity);
+                    await HttpContext.SignInAsync(principal);
+                    RedirectToAction("Index", "Product");
+
+                }
             }
+
 
             return View();
         }
@@ -46,8 +54,8 @@ namespace EcoLightCore.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-            return RedirectToAction("Index","Home");
-        
+            return RedirectToAction("Index", "Home");
+
         }
     }
 }

@@ -83,9 +83,9 @@ namespace EcoLightCore
                 app.UseHsts();
             }
 
-
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseHttpsRedirection();
+           
             app.UseAuthentication();    
             app.UseRouting();
 

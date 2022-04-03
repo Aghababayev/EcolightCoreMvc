@@ -1,6 +1,7 @@
 ﻿using BusinessLAyer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,12 +49,12 @@ namespace BusinessLAyer.Concrete
             return _orderDAL.GetProductDistributer();
         }
 
-        public object BDropdownDistributor()
+        public List<SelectListItem>  BDropdownDistributor()
         {
            return _orderDAL.DropdownDistributor();
         }
 
-        public object BDropdownProduct()
+        public List<SelectListItem> BDropdownProduct()
         {
             return _orderDAL.DropdownProduct();
         }

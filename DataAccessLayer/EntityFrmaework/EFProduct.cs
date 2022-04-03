@@ -14,7 +14,7 @@ namespace DataAccessLayer.EntityFrmaework
 {
     public class EFProduct : GenericRepository<Product>, IProductDAL
     {
-        public object DropdownProduct()
+        public List<SelectListItem> DropdownProduct()
         {
             using var c = new Context();
            return c.Brands.Select(p => new SelectListItem { Value = p.BrandID.ToString(), Text = p.BrandName }).ToList();

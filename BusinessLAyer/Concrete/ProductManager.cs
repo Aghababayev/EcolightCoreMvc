@@ -1,6 +1,7 @@
 ﻿using BusinessLAyer.Abstract;
 using DataAccessLayer.Abstract;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace BusinessLAyer.Concrete
             _productDAL.Delete(t);
         }
 
-        public object BDropdownproduct()
+        public List<SelectListItem> BDropdownproduct()
         {
             return _productDAL.DropdownProduct();
         }

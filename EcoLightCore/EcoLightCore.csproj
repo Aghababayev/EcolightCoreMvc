@@ -40,4 +40,8 @@
     <Folder Include="Views\Shared\Components\Distributer\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\lib\font-awesome\css\all.min.css" />
+  </ItemGroup>
+
 </Project>

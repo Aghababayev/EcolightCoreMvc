@@ -1,4 +1,5 @@
 ﻿using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace DataAccessLayer.Abstract
     public interface IOrderDAL : IGenericDAL<Order>
     {
         List<Order> GetProductDistributer();
-        Object DropdownDistributor();
-        Object DropdownProduct();
-       
-      
+        List<SelectListItem> DropdownDistributor();
+        List<SelectListItem> DropdownProduct();
+
+
     }
 }
