@@ -5798,7 +5798,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\naghababayev\\.nuget\\packages\\": {}
+    "C:\\Users\\naghababayev.ASM\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -5806,11 +5806,11 @@
       "projectUniqueName": "D:\\C# projects\\EcoLightCore\\EntityLayer\\EntityLayer.csproj",
       "projectName": "EntityLayer",
       "projectPath": "D:\\C# projects\\EcoLightCore\\EntityLayer\\EntityLayer.csproj",
-      "packagesPath": "C:\\Users\\naghababayev\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\naghababayev.ASM\\.nuget\\packages\\",
       "outputPath": "D:\\C# projects\\EcoLightCore\\EntityLayer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\naghababayev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\naghababayev.ASM\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5872,7 +5872,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

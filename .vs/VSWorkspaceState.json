@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\EcoLightCore",
+    "\\EcoLightCore\\Controllers"
   ],
-  "SelectedNode": "\\EcoLightCore.sln",
+  "SelectedNode": "\\EcoLightCore\\Controllers\\LoginController.cs",
   "PreviewInSolutionExplorer": false
 }

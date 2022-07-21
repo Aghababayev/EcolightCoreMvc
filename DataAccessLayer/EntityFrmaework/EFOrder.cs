@@ -16,15 +16,20 @@ namespace DataAccessLayer.EntityFrmaework
     {
         public List<SelectListItem> DropdownDistributor()
         {
-            using var c = new Context();
-           return c.Distributors.Select(x => new SelectListItem { Value = x.DistribitorID.ToString(), Text = x.Dname }).ToList();
+            using( var c = new Context())
+            {  
+                return c.Distributors.Select(x => new SelectListItem { Value = x.DistribitorID.ToString(), Text = x.Dname }).ToList();
+            }
+         
        
         }
 
         public List<SelectListItem> DropdownProduct()
         {
-            using var c = new Context();
-          return c.Products.Select(x => new SelectListItem { Value = x.ProductID.ToString(), Text = x.ProductName + " " + x.Brand.BrandName + " WATTS:" + x.Watt }).ToList();
+            using (var c = new Context())
+            { return c.Products.Select(x => new SelectListItem { Value = x.ProductID.ToString(), Text = x.ProductName + " " + x.Brand.BrandName + " WATTS:" + x.Watt }).ToList(); 
+            }
+          
         }
 
         public List<Order> GetProductDistributer()
